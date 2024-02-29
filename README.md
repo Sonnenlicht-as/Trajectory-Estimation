@@ -63,9 +63,3 @@ Mod items supported in version 1.20.1:
 - All guns
 - Grenade
 - Stun Grenade
-
----
-
-### README.md
-- en: [English](README.md)
-- zh_CN: [简体中文](/readme/README_zh_CN.md)
