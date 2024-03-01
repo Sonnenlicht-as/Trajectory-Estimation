@@ -8,7 +8,7 @@ This MOD adds a client-side **rendering trajectory** for shooting projectiles in
 
 Also added the **sound reminder**. If there is an entity on the trajectory during aiming, a "ding" sound will be emitted as a reminder to inform the player that an entity may be hit.
 
-MOD has a config GUI for every supported item, enable/disable for rendering trajectory and sound reminder. Global settings can change the size and color of the rendered trajectory cube.
+MOD has a config GUI for every supported item, **enable/disable** for rendering trajectory and sound reminder. Global settings can change the size and color of the rendered trajectory cube/line..
 
 ---
 
@@ -28,8 +28,8 @@ Duplicate questions or questions that do not contain the information required fo
 ---
 
 ### MOD Support:
-Mod items supported in version 1.20.1:
-
+Mod items supported in listed versions:
+(This depends on whether these MODs support the corresponding minecraft version)
 #### Ice and Fire:
 - Tide Trident
 - Lich Staff
