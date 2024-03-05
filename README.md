@@ -63,3 +63,66 @@ Mod items supported in listed versions:
 - All guns
 - Grenade
 - Stun Grenade
+
+####  AlexCave's Caves:
+- Limestone Spear
+- Extinction Spear
+- Dreadbow
+- Sea Staff
+
+####  The Bumblezone:
+- Stinger Spear
+- Crystal Cannon
+- Pollen Puff
+- Dirt Pellet
+
+####  The Aether:
+- Phoenix Bow
+- Hammer Of Kingbdogz
+- Lightning Knife
+- Dart Shooter
+
+####  Creatures And Beasts:
+- Spear
+
+####  Alex's Mobs:
+- Pocket Sand
+- Hemolymph Blaster
+- Blood Sprayer
+- Stink Ray
+- Vine Lasso
+
+####  Vampirism:
+- Single Crossbow
+- Double Crossbow
+- Tech Crossbow
+- Holy Water Splash Bottle
+
+####  L2Weaponry:
+- Javelin
+  
+####  L2Archery:
+- Generic Bow
+
+####  Advent Of Ascension 3:
+- Bow
+- Crossbow
+- Staff
+- Gun
+- Blaster
+- Sniper
+- Shotgun
+- Cannon
+- Thrown Weapon
+
+####  Arch Bows:
+- Flat Bow
+- Long Bow
+- Recurve Bow
+- Short Bow
+- Arbalest
+- Heavy Crossbow
+- Pistol Crossbow
+
+####  Arch Arsenal:
+- Mod Bow
