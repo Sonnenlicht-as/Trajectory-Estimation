@@ -124,5 +124,5 @@ Mod items supported in listed versions:
 - Heavy Crossbow
 - Pistol Crossbow
 
-####  Arch Arsenal:
+####  Archers' Arsenal:
 - Mod Bow
