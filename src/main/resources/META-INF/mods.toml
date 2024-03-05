@@ -1,0 +1,26 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "GNU GPL 3.0"
+issueTrackerURL = "https://github.com/Sonnenlicht-as/Trajectory-Estimation/issues"
+
+[[mods]]
+modId = "trajectory_estimation"
+version = "${file.jarVersion}"
+displayName = "Trajectory Estimation"
+logoFile= "META-INF/trajectory_estimation.png"
+authors = "Sonnenlichts"
+description = "This mod adds client-side rendered trajectory for some items in game."
+
+[[dependencies.trajectory_estimation]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.trajectory_estimation]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,)"
+ordering = "NONE"
+side = "BOTH"

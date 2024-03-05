@@ -1,0 +1,151 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+    }
+}
+
+plugins {
+    id 'net.minecraftforge.gradle' version '5.1.+'
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+
+group = 'sonnenlichts.fsc'
+version = '1.0.2-1.20.1'
+archivesBaseName = 'trajectory_estimation'
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    runs {
+        client {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                trajectory_estimation {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                trajectory_estimation {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        tasks.withType(JavaCompile) {
+            options.encoding = "UTF-8"
+        }
+
+        gameTestServer {
+            workingDirectory project.file("run")
+            property "forge.logging.markers", "REGISTRIES"
+            property "forge.logging.console.level", "debug"
+            property "forge.enabledGameTestNamespaces", archivesBaseName
+
+            mods {
+                trajectory_estimation {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            property 'forge.logging.console.level', 'debug'
+
+            args '--mod', archivesBaseName, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+
+            mods {
+                trajectory_estimation {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+
+repositories {
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:1.20.1-47.2.20"
+    compileOnly fg.deobf('curse.maven:mrcrayfishguns-945471:5060608')
+    compileOnly fg.deobf('curse.maven:framework-549225:4718251')
+    compileOnly fg.deobf('curse.maven:l_ender-s-cataclysm-551586:5058433')
+    compileOnly fg.deobf('curse.maven:blue_skies-312918:5010316')
+    compileOnly fg.deobf('curse.maven:twilight_forest-227639:5071019')
+    compileOnly fg.deobf('curse.maven:ice_and_fire-264231:5037783')
+    compileOnly fg.deobf('curse.maven:immersive_engineering-231951:4782978')
+    compileOnly fg.deobf('curse.maven:alexs-caves-924854:5136287')
+    compileOnly fg.deobf('curse.maven:the-bumblezone-362479:5142208')
+    compileOnly fg.deobf('curse.maven:aether-255308:5068019')
+    compileOnly fg.deobf('curse.maven:alexsmobs-426558:4959531')
+    compileOnly fg.deobf('curse.maven:vampirism-233029:5065658')
+    compileOnly fg.deobf('curse.maven:l2weaponry-843723:5133398')
+    compileOnly fg.deobf('curse.maven:l2archery-758353:5073098')
+    compileOnly fg.deobf("curse.maven:l2library-620203:5071762")
+    compileOnly fg.deobf('curse.maven:aoa3-311054:4988685')
+    compileOnly fg.deobf("maven.modrinth:arch-bows:oaWo8oBL")
+}
+
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title"     : "trajectory_estimation",
+                "Specification-Vendor"    : "Trajectory Estimation",
+                "Specification-Version"   : "1",
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.version,
+                "Implementation-Vendor"   : "Trajectory Estimation",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}
+
+
+jar.finalizedBy('reobfJar')
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
