@@ -115,7 +115,7 @@ Mod items supported in listed versions:
 - Cannon
 - Thrown Weapon
 
-####  Arch Bows:
+####  Arch Bows: (in 1.18, Arch Bows version above 1.0.8-1.18.2)
 - Flat Bow
 - Long Bow
 - Recurve Bow
