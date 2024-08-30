@@ -10,6 +10,12 @@ Also added the **sound reminder**. If there is an entity on the trajectory durin
 
 MOD has a config GUI for every supported item, **enable/disable** for rendering trajectory and sound reminder. Global settings can change the size and color of the rendered trajectory cube/line..
 
+**In ver 1.0.3:**
+- Fixed some bugs
+- Add the support for neoforge, fabric
+- Add support for some mods
+- In **Fabric** version, to modify the configuration using the config GUI, you need to install [Mod Menu](https://modrinth.com/mod/modmenu).If you don't use ModMenu, you can manually modify the config json by finding it in **".minecraft/config/trajectory_estimation.json"**.
+
 ---
 
 ### Details:
@@ -125,4 +131,19 @@ Mod items supported in listed versions:
 - Pistol Crossbow
 
 ####  Archers' Arsenal:
-- Mod Bow
+- All Bows
+
+####  More Bows: Restrung!:
+- All Bows
+- 
+####  Mekanism:
+- Electric Bow
+- 
+####  Tetra:
+- Modular Bow
+- Modular Crossbow
+- 
+####  Silent Gear:
+- Gear Slingshot
+- Gear Bow
+- Gear Crossbow
